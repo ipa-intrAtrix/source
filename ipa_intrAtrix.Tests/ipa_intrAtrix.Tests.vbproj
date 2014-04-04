@@ -141,9 +141,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ipa_intrAtrix\ipa-intrAtrix.vbproj">
+    <ProjectReference Include="..\ipa_intrAtrix\ipa_intrAtrix.vbproj">
       <Project>{32E14768-8412-44C2-A80C-B5E562D91060}</Project>
-      <Name>ipa-intrAtrix</Name>
+      <Name>ipa_intrAtrix</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
