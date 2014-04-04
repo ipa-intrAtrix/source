@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ipa-intrAtrix", "ipa_intrAtrix\ipa-intrAtrix.vbproj", "{32E14768-8412-44C2-A80C-B5E562D91060}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ipa-intrAtrix.Tests", "ipa_intrAtrix.Tests\ipa-intrAtrix.Tests.vbproj", "{7F596349-2B2B-4F94-8BA9-F680AD09C53D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E14768-8412-44C2-A80C-B5E562D91060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E14768-8412-44C2-A80C-B5E562D91060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E14768-8412-44C2-A80C-B5E562D91060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E14768-8412-44C2-A80C-B5E562D91060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F596349-2B2B-4F94-8BA9-F680AD09C53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F596349-2B2B-4F94-8BA9-F680AD09C53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F596349-2B2B-4F94-8BA9-F680AD09C53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F596349-2B2B-4F94-8BA9-F680AD09C53D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
