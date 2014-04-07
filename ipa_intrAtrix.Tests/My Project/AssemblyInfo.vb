@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -7,10 +7,10 @@ Imports System.Runtime.InteropServices
 ' die mit einer Assembly verknüpft sind.
 
 ' Werte der Assemblyattribute überprüfen
-<Assembly: AssemblyTitle("ipa_intrAtrix.Tests")> 
+<Assembly: AssemblyTitle("intrAtrix.Tests")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ipa_intrAtrix.Tests")> 
+<Assembly: AssemblyProduct("intrAtrix.Tests")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 

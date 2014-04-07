@@ -1,9 +1,5 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Text
-Imports System.Web.Mvc
+﻿Imports System.Web.Mvc
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
-Imports ipa_intrAtrix
 
 <TestClass()> Public Class HomeControllerTest
 
