@@ -22,8 +22,9 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Info", "About", "Home")</li>
-                            <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Kundennetzwerke", "Customer", "CustomerNetData")</li>
+                            <li>@Html.ActionLink(User.Identity.Name, "User", "Userdata")</li>
+                            <li>@Html.ActionLink("Lieferantenangaben", "Provider", "ProviderData")</li>
                         </ul>
                     </nav>
                 </div>
