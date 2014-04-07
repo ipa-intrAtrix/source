@@ -8,8 +8,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7F596349-2B2B-4F94-8BA9-F680AD09C53D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>intrAtrix.Tests</RootNamespace>
-    <AssemblyName>intrAtrix.Tests</AssemblyName>
+    <RootNamespace>ipa_intrAtrix.Tests</RootNamespace>
+    <AssemblyName>ipa_intrAtrix.Tests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -26,7 +26,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>intrAtrix.Tests.xml</DocumentationFile>
+    <DocumentationFile>ipa_intrAtrix.Tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -35,7 +35,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>intrAtrix.Tests.xml</DocumentationFile>
+    <DocumentationFile>ipa_intrAtrix.Tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -69,9 +69,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ipa_intrAtrix\intrAtrix.vbproj">
+    <ProjectReference Include="..\ipa_intrAtrix\ipa_intrAtrix.vbproj">
       <Project>{32E14768-8412-44C2-A80C-B5E562D91060}</Project>
-      <Name>intrAtrix</Name>
+      <Name>ipa_intrAtrix</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

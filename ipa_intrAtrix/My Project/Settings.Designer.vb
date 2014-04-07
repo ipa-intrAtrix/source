@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
 
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
-        Friend ReadOnly Property Settings() As Global.intrAtrix.My.MySettings
+        Friend ReadOnly Property Settings() As Global.ipa_intrAtrix.My.MySettings
             Get
-                Return Global.intrAtrix.My.MySettings.Default
+                Return Global.ipa_intrAtrix.My.MySettings.Default
             End Get
         End Property
     End Module
