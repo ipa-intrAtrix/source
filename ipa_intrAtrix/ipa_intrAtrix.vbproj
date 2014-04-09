@@ -198,6 +198,14 @@
     <Content Include="Views\Customer\Create.vbhtml" />
     <Content Include="Views\Customer\Delete.vbhtml" />
     <Content Include="Views\Customer\Edit.vbhtml" />
+    <Content Include="Views\Provider\Edit.vbhtml" />
+    <Content Include="Views\Provider\Details.vbhtml" />
+    <Content Include="Views\Provider\Delete.vbhtml" />
+    <Content Include="Views\Provider\Create.vbhtml" />
+    <Content Include="Views\User\Edit.vbhtml" />
+    <Content Include="Views\User\Details.vbhtml" />
+    <Content Include="Views\User\Delete.vbhtml" />
+    <Content Include="Views\User\Create.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

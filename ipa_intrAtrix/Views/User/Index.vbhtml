@@ -18,6 +18,22 @@ End Code
 End Section
 
 <h3>Inhalt der der Benutzerdaten Seite.</h3>
-<ol class="round">
-    <li></li>
-</ol>
+
+
+<table style="width: 100%;">
+    <tr>
+        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
