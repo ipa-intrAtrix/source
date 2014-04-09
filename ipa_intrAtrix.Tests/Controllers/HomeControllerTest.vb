@@ -12,28 +12,6 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
         ' Assert
         Dim viewData As ViewDataDictionary = result.ViewData
-        Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", viewData("Message"))
-    End Sub
-
-    <TestMethod()> Public Sub About()
-        ' Arrange
-        Dim controller As New HomeController()
-
-        ' Act
-        Dim result As ViewResult = DirectCast(controller.About(), ViewResult)
-
-        ' Assert
-        Assert.IsNotNull(result)
-    End Sub
-
-    <TestMethod()> Public Sub Contact()
-        ' Arrange
-        Dim controller As New HomeController()
-
-        ' Act
-        Dim result As ViewResult = DirectCast(controller.Contact(), ViewResult)
-
-        ' Assert
-        Assert.IsNotNull(result)
+        Assert.AreEqual("Dies ist die Startseite des Intranets von Atrix - IntrAtrix", viewData("Message"))
     End Sub
 End Class

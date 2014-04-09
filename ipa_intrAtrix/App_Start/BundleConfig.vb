@@ -19,7 +19,7 @@ Public Class BundleConfig
         bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
                     "~/Scripts/modernizr-*"))
 
-        bundles.Add(New StyleBundle("~/Content/css").Include("~/Content/site.css"))
+        bundles.Add(New StyleBundle("~/Content/css").Include("~/Content/Site.css"))
 
         bundles.Add(New StyleBundle("~/Content/themes/base/css").Include(
                     "~/Content/themes/base/jquery.ui.core.css",

@@ -3,7 +3,7 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>@ViewData("Title") - Meine ASP.NET MVC-Anwendung</title>
+        <title>@ViewData("Title") - intrAtrix</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
@@ -22,9 +22,9 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Kundennetzwerke", "Customer", "CustomerNetData")</li>
-                            <li>@Html.ActionLink(User.Identity.Name, "User", "Userdata")</li>
-                            <li>@Html.ActionLink("Lieferantenangaben", "Provider", "ProviderData")</li>
+                            <li>@Html.ActionLink("Kundennetzwerke", "Index", "Customer")</li>
+                            <li>@Html.ActionLink(User.Identity.Name, "Index", "User")</li>
+                            <li>@Html.ActionLink("Lieferantenangaben", "Index", "Provider")</li>
                         </ul>
                     </nav>
                 </div>
