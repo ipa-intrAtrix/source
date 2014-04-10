@@ -127,6 +127,16 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contracts\Lieferantenangaben\LoginData.vb" />
+    <Compile Include="Models\Contracts\AuthorisierteBenutzer\Users.vb" />
+    <Compile Include="Models\Contracts\Lieferantenangaben\Contact.vb" />
+    <Compile Include="Models\Contracts\Kundennetzwerke\Elements.vb" />
+    <Compile Include="Models\Contracts\Kundennetzwerke\CustomerNetwork.vb" />
+    <Compile Include="Models\Contracts\Lieferantenangaben\Place.vb" />
+    <Compile Include="Models\Contracts\Lieferantenangaben\Provider.vb" />
+    <Compile Include="Models\Contracts\Lieferantenangaben\ProviderContact.vb" />
+    <Compile Include="Models\Contracts\Kundennetzwerke\Waranty.vb" />
+    <Compile Include="Models\NHibernateHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -191,6 +201,15 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <EmbeddedResource Include="Models\Mappings\Contact.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\Provider.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\ProviderContact.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\Users.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\CustomerNetwork.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\Elements.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\Waranty.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\LoginData.hbm.xml" />
+    <EmbeddedResource Include="Models\Mappings\Place.hbm.xml" />
     <Content Include="Views\User\Index.vbhtml" />
     <Content Include="Views\Customer\Index.vbhtml" />
     <Content Include="Views\Provider\Index.vbhtml" />
@@ -253,7 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

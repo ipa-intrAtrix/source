@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="ipa_intrAtrix.Models.Contracts.Kundennetzwerke" assembly="ipa_intrAtrix">
+
+  <class name="CustomerNetwork" table="Kundennetzwerk" lazy="false">
+
+    <id name="CustId">
+      <column name="kund_id" sql-type="integer" not-null="true"/>
+      <generator class="native" />
+    </id>
+
+    <property name="SpiderId">
+      <column name="kund_spider_id" length="35" not-null="true" />
+    </property>
+
+    <property name="InternalDescr">
+      <column name ="kund_interneBez" length="35" not-null="false"/>
+    </property>
+
+    <property name="Schema">
+      <column name ="kund_schema" not-null="false"/>
+    </property>
+
+    <property name="Starting">
+      <column name ="kund_inbetrieb" not-null="false"/>
+    </property>
+
+    <property name="Shutdown">
+      <column name ="kund_ausserbetr" not-null="false"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>
