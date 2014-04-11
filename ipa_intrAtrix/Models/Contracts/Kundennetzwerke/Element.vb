@@ -1,7 +1,7 @@
 ﻿
 Namespace Models.Contracts.Kundennetzwerke
 
-    Public Class Elements
+    Public Class Element
 
 
         Private _elementId As Integer
@@ -18,7 +18,7 @@ Namespace Models.Contracts.Kundennetzwerke
             End Set
         End Property
 
-        Public Overridable Property Element() As String
+        Public Overridable Property ElementName() As String
             Get
                 Return _element
             End Get

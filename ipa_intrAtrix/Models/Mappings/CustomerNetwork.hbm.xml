@@ -29,6 +29,16 @@
       <column name ="kund_ausserbetr" not-null="false"/>
     </property>
 
+    <property name="WarantyExp">
+      <column name ="kund_garantieDauer" not-null="false"/>
+    </property>
+
+    <many-to-one name="Waranty"
+                     class="Waranty"
+                     column="kund_garantie_id"
+                     cascade="all" />
+    
+
   </class>
 
 </hibernate-mapping>

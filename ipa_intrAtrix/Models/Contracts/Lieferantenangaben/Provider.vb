@@ -6,8 +6,11 @@ Namespace Models.Contracts.Lieferantenangaben
         Private _company As String
         Private _lockbox As String
         Private _customerRef As String
-        Private _providerContact As IList(Of ProviderContact)
-        Private _authorized As Users
+        Private _phone As String
+        Private _email As String
+
+        Private _contact As IList(Of Contact) = New List(Of Contact)
+        Private _authorized As IList(Of Users) = New List(Of Users)
         Private _place As Place
         Private _logindata As LoginData
 
@@ -47,20 +50,38 @@ Namespace Models.Contracts.Lieferantenangaben
             End Set
         End Property
 
-        Protected Overridable Property ProviderContact() As IList(Of ProviderContact)
+        Public Overridable Property Phone() As String
             Get
-                Return _providerContact
+                Return _phone
             End Get
-            Set(value As IList(Of ProviderContact))
-                _providerContact = value
+            Set(value As String)
+                _phone = value
             End Set
         End Property
 
-        Public Overridable Property Authorized() As Users
+        Public Overridable Property Email() As String
+            Get
+                Return _email
+            End Get
+            Set(value As String)
+                _email = value
+            End Set
+        End Property
+
+        Protected Overridable Property Contact() As IList(Of Contact)
+            Get
+                Return _contact
+            End Get
+            Set(value As IList(Of Contact))
+                _contact = value
+            End Set
+        End Property
+
+        Public Overridable Property Authorized() As IList(Of Users)
             Get
                 Return _authorized
             End Get
-            Set(value As Users)
+            Set(value As IList(Of Users))
                 _authorized = value
             End Set
         End Property
