@@ -1,6 +1,12 @@
-﻿Public Class ProviderController
+﻿Imports System.Linq.Expressions
+Imports ipa_intrAtrix.Models.Contracts
+Imports ipa_intrAtrix.Models
+
+Public Class ProviderController
     Inherits System.Web.Mvc.Controller
 
+    ' ReSharper disable once FieldCanBeMadeReadOnly.Local
+    Private _providerData As ProviderHelper = New ProviderHelper
     '
     ' GET: /ProviderData
 
@@ -19,9 +25,9 @@
     ' POST: /ProviderData/Create
 
     <HttpPost()> _
-    Function Create(ByVal collection As FormCollection) As ActionResult
+    Function Create(provider As Provider) As ActionResult
         Try
-            ' TODO: Logik
+            _providerData.CreateProvider(provider)
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -32,10 +38,9 @@
     ' POST: /ProviderData/Edit/5
 
     <HttpPost()> _
-    Function Edit(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
+    Function Edit(ByVal id As Integer, provider As Provider) As ActionResult
         Try
-            ' TODO: Logik
-
+            _providerData.UpdateProvider(provider)
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -48,8 +53,8 @@
     <HttpPost()> _
     Function Delete(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
         Try
-            ' TODO: Logik
-
+            Dim provider = _providerData.GetProviderById(id)
+            _providerData.DeleteProvider(provider)
             Return RedirectToAction("Index")
         Catch
             Return View()

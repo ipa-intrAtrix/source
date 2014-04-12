@@ -19,5 +19,5 @@ End Section
 
 <h3>Inhalt der der Lieferantenangaben Seite.</h3>
 <ol class="round">
-    <li></li>
+    <li><a href="#">Lieferanten Details</a></li>
 </ol>

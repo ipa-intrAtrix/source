@@ -1,1 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="ipa_intrAtrix.Models.Contracts" assembly="ipa_intrAtrix">
+
+  <class name="LoginData" table="Login" lazy="false">
+
+    <id name="LoginDataId">
+      <column name="login_id" sql-type="integer" not-null="true"/>
+      <generator class="native" />
+    </id>
+
+    <property name="Username">
+      <column name="login_username" length="35" not-null="false" />
+    </property>
+
+    <property name="Password">
+      <column name ="login_password" length="35" not-null="false"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

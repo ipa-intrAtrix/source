@@ -1,9 +1,9 @@
-﻿Namespace Models.Contracts.Lieferantenangaben
+﻿Namespace Models.Contracts
     Public Class LoginData
         Private _loginDataId As Integer
         Private _username As String
         Private _password As String
-        Private _link As String
+
 
         Public Overridable Property LoginDataId() As Integer
             Get
@@ -32,14 +32,6 @@
             End Set
         End Property
 
-        Public Overridable Property Link() As String
-            Get
-                Return _link
-            End Get
-            Set(value As String)
-                _link = value
-            End Set
-        End Property
 
     End Class
 End Namespace

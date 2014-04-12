@@ -49,11 +49,17 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.2.9.2.2\lib\Lucene.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Search">
+      <HintPath>..\packages\NHibernate.Search.2.0.2.4000\lib\Net35\NHibernate.Search.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -127,14 +133,17 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Contracts\Lieferantenangaben\LoginData.vb" />
-    <Compile Include="Models\Contracts\AuthorisierteBenutzer\Users.vb" />
-    <Compile Include="Models\Contracts\Lieferantenangaben\Contact.vb" />
-    <Compile Include="Models\Contracts\Kundennetzwerke\Element.vb" />
-    <Compile Include="Models\Contracts\Kundennetzwerke\CustomerNetwork.vb" />
-    <Compile Include="Models\Contracts\Lieferantenangaben\Place.vb" />
-    <Compile Include="Models\Contracts\Lieferantenangaben\Provider.vb" />
-    <Compile Include="Models\Contracts\Kundennetzwerke\Waranty.vb" />
+    <Compile Include="Models\CustomerHelper.vb" />
+    <Compile Include="Models\UserHelper.vb" />
+    <Compile Include="Models\ProviderHelper.vb" />
+    <Compile Include="Models\Contracts\LoginData.vb" />
+    <Compile Include="Models\Contracts\Users.vb" />
+    <Compile Include="Models\Contracts\Contact.vb" />
+    <Compile Include="Models\Contracts\Element.vb" />
+    <Compile Include="Models\Contracts\CustomerNetwork.vb" />
+    <Compile Include="Models\Contracts\Place.vb" />
+    <Compile Include="Models\Contracts\Provider.vb" />
+    <Compile Include="Models\Contracts\Waranty.vb" />
     <Compile Include="Models\NHibernateHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

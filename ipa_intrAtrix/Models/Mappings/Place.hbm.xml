@@ -1,1 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="ipa_intrAtrix.Models.Contracts" assembly="ipa_intrAtrix">
+
+  <class name="Place" table="Ortschaft" lazy="false">
+
+    <id name="PlaceId">
+      <column name="ort_id" sql-type="integer" not-null="true"/>
+      <generator class="native" />
+    </id>
+
+    <property name="Name">
+      <column name="ort_name"  not-null="false" />
+    </property>
+
+    <property name="Postal">
+      <column name ="ort_plz"  not-null="false"/>
+    </property>
+
+    <property name="Land">
+      <column name="ort_land" not-null="false" />
+    </property>
+
+    <property name="State">
+      <column name ="ort_kanton"  not-null="false"/>
+    </property>
+
+
+  </class>
+
+</hibernate-mapping>

@@ -1,20 +1,18 @@
-﻿Namespace Models.Contracts.AuthorisierteBenutzer
-    Public Class Users
-
-        Private _userId As Integer
+﻿Namespace Models.Contracts
+    Public Class Contact
+        Private _contactId As Integer
         Private _name As String
         Private _lastname As String
-        Private _pc As String
-        Private _ip As String
-        Private _username As String
-        Private _pass As String
+        Private _branch As String
+        Private _phone As Integer
+        Private _email As String
 
-        Public Overridable Property UserId() As Integer
+        Public Overridable Property ContactId() As Integer
             Get
-                Return _userId
+                Return _contactId
             End Get
             Set(value As Integer)
-                _userId = value
+                _contactId = value
             End Set
         End Property
 
@@ -36,39 +34,30 @@
             End Set
         End Property
 
-        Public Overridable Property Pc() As String
+        Public Overridable Property Branch() As String
             Get
-                Return _pc
+                Return _branch
             End Get
             Set(value As String)
-                _pc = value
+                _branch = value
             End Set
         End Property
 
-        Public Overridable Property Ip() As String
+        Public Overridable Property Phone() As Integer
             Get
-                Return _ip
+                Return _phone
             End Get
-            Set(value As String)
-                _ip = value
+            Set(value As Integer)
+                _phone = value
             End Set
         End Property
 
-        Public Overridable Property Username() As String
+        Public Overridable Property Email() As String
             Get
-                Return _username
+                Return _email
             End Get
             Set(value As String)
-                _username = value
-            End Set
-        End Property
-
-        Public Overridable Property Pass() As String
-            Get
-                Return _pass
-            End Get
-            Set(value As String)
-                _pass = value
+                _email = value
             End Set
         End Property
 

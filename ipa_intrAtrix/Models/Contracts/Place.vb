@@ -1,4 +1,4 @@
-﻿Namespace Models.Contracts.Lieferantenangaben
+﻿Namespace Models.Contracts
     Public Class Place
         Private _placeId As Integer
         Private _name As String

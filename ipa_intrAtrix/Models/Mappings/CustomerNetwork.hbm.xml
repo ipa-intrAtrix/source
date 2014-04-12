@@ -35,8 +35,7 @@
 
     <many-to-one name="Waranty"
                      class="Waranty"
-                     column="kund_garantie_id"
-                     cascade="all" />
+                     column="kund_garantie_id" />
     
 
   </class>

@@ -1,5 +1,5 @@
 ﻿
-Namespace Models.Contracts.Kundennetzwerke
+Namespace Models.Contracts
 
     Public Class Element
 

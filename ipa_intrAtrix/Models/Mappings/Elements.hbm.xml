@@ -1,1 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="ipa_intrAtrix.Models.Contracts" assembly="ipa_intrAtrix">
+
+  <class name="Element" table="Netzwerkelemente" lazy="false">
+
+    <id name="ElementId">
+      <column name="netz_id" sql-type="integer" not-null="true"/>
+      <generator class="native" />
+    </id>
+
+    <property name="ElementName">
+      <column name="pr_firmenname" length="35" not-null="true" />
+    </property>
+
+    <property name="ElementDescr">
+      <column name ="pr_postfach" length="35" not-null="false"/>
+    </property>
+
+    <many-to-one name="CustomerNetwork" column="netz_kund_id"></many-to-one>
+
+  </class>
+
+</hibernate-mapping>

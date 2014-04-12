@@ -1,4 +1,4 @@
-﻿Namespace Models.Contracts.Kundennetzwerke
+﻿Namespace Models.Contracts
 
     Public Class CustomerNetwork
 
@@ -10,7 +10,6 @@
         Private _shutdown As Date
         Private _warantyExp As Date
         Private _waranty As Waranty
-        Private _elements As IList(Of Element) = New List(Of Element)
 
 
         Public Overridable Property CustId() As Integer
@@ -83,15 +82,6 @@
             End Get
             Set(value As Waranty)
                 _waranty = value
-            End Set
-        End Property
-
-        Public Overridable Property Elements() As IList(Of Element)
-            Get
-                Return _elements
-            End Get
-            Set(value As IList(Of Element))
-                _elements = value
             End Set
         End Property
 

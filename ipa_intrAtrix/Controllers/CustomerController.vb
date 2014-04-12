@@ -1,5 +1,12 @@
-﻿Public Class CustomerController
+﻿Imports ipa_intrAtrix.Models.Contracts
+Imports ipa_intrAtrix.Models
+
+Public Class CustomerController
     Inherits System.Web.Mvc.Controller
+
+    ' ReSharper disable once UnusedMember.Local
+    Private _customerData As New CustomerHelper
+
 
     '
     ' GET: /Customer
@@ -19,9 +26,9 @@
     ' POST: /Customer/Create
 
     <HttpPost()> _
-    Function Create(ByVal collection As FormCollection) As ActionResult
+    Function Create(customerNetwork As CustomerNetwork) As ActionResult
         Try
-            ' TODO: Logik
+            _customerData.CreateCustomerNetwork(customerNetwork)
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -33,10 +40,9 @@
     ' POST: /Customer/Edit/5
 
     <HttpPost()> _
-    Function Edit(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
+    Function Edit(ByVal id As Integer, customerNetwork As CustomerNetwork) As ActionResult
         Try
-            ' TODO: Logik
-
+            _customerData.UpdateCustomerNetwork(customerNetwork)
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -49,8 +55,8 @@
     <HttpPost()> _
     Function Delete(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
         Try
-            ' TODO: Logik
-
+            Dim customerData = _customerData.GetCustomerNetworkById(id)
+            _customerData.DeleteCustomerNetwork(customerData)
             Return RedirectToAction("Index")
         Catch
             Return View()

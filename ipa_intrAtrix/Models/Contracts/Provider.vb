@@ -1,6 +1,5 @@
-﻿Imports ipa_intrAtrix.Models.Contracts.AuthorisierteBenutzer
-
-Namespace Models.Contracts.Lieferantenangaben
+﻿
+Namespace Models.Contracts
     Public Class Provider
         Private _providerId As Integer
         Private _company As String
@@ -8,6 +7,7 @@ Namespace Models.Contracts.Lieferantenangaben
         Private _customerRef As String
         Private _phone As String
         Private _email As String
+        Private _weblink As String
 
         Private _contact As IList(Of Contact) = New List(Of Contact)
         Private _authorized As IList(Of Users) = New List(Of Users)
@@ -65,6 +65,15 @@ Namespace Models.Contracts.Lieferantenangaben
             End Get
             Set(value As String)
                 _email = value
+            End Set
+        End Property
+
+        Public Overridable Property Weblink() As String
+            Get
+                Return _weblink
+            End Get
+            Set(value As String)
+                _weblink = value
             End Set
         End Property
 

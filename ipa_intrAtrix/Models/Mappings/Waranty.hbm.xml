@@ -1,1 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="ipa_intrAtrix.Models" assembly="ipa_intrAtrix">
+
+  <class name="Provider" table="Lieferant" lazy="false">
+
+    <id name="ProviderId">
+      <column name="pr_id" sql-type="integer" not-null="true"/>
+      <generator class="native" />
+    </id>
+
+    <property name="Company">
+      <column name="pr_firmenname" length="35" not-null="true" />
+    </property>
+
+    <property name="LockBox">
+      <column name ="pr_postfach" length="35" not-null="false"/>
+    </property>
+
+    <property name="CustomerRef">
+      <column name ="pr_kundennummer" not-null="false"/>
+    </property>
+
+    <property name="Phone">
+      <column name ="pr_telefon" not-null="false"/>
+    </property>
+
+    <property name="Email">
+      <column name ="pr_email" not-null="false"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

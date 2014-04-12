@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-    namespace="ipa_intrAtrix.Models.Contracts.Lieferantenangaben" assembly="ipa_intrAtrix">
+    namespace="ipa_intrAtrix.Models" assembly="ipa_intrAtrix">
 
   <class name="Provider" table="Lieferant" lazy="false">
 
@@ -28,6 +28,25 @@
     <property name="Email">
       <column name ="pr_email" not-null="false"/>
     </property>
+    <property name="Weblink">
+      <column name ="pr_weblink" not-null="false"/>
+    </property>
+
+    <many-to-one name="Place" column="pr_ort_id"/>
+    
+    <many-to-one name="LoginData" column="pr_logindaten_id"/>
+
+    <set name="Contacts" table="Kontakt_Lieferant"
+            inverse="false" fetch="select" cascade="all">
+      <key column="zw_lieferant_id" />
+      <many-to-many column="zw_kontakt_id" class="Contact" />
+    </set>
+
+    <set name="Users" table="User_Lieferant"
+             fetch="select" cascade="all">
+      <key column="zw_lieferant_id" />
+      <many-to-many column="zw_user_id" class="Users" />
+    </set>
 
   </class>
 
