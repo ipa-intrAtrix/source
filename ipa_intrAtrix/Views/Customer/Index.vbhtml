@@ -1,22 +1,70 @@
-﻿@Code
-    ViewData("Title") = "Kundennetzwerkdaten"
+﻿@ModelType IEnumerable(Of ipa_intrAtrix.Models.Contracts.CustomerNetwork)
+
+@Code
+    ViewData("Title") = "Index"
 End Code
 
-@section featured
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewData("Title").</h1>
-                <h2>@ViewData("Message")</h2>
-            </hgroup>
-            <p>
-                Hier sind alle Kundennetzwerkdaten zu finden. 
-            </p>
-        </div>
-    </section>
-End Section
+<h2>Index</h2>
 
-<h3>Inhalt der der Kundennetzwerkdaten Seite.</h3>
-<ol class="round">
-    <li></li>
-</ol>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.CustId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.SpiderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.InternalDescr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Schema)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Starting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Shutdown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.WarantyExp)
+        </th>
+        <th></th>
+    </tr>
+
+@For Each item In Model
+    Dim currentItem = item
+    @<tr>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.CustId)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.SpiderId)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.InternalDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Schema)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Starting)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Shutdown)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.WarantyExp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", New With {.id = currentItem.CustId}) |
+            @Html.ActionLink("Details", "Details", New With {.id = currentItem.CustId}) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = currentItem.CustId})
+        </td>
+    </tr>
+Next
+
+</table>

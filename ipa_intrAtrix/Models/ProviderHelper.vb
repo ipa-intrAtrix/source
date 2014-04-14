@@ -3,50 +3,50 @@ Imports NHibernate
 
 Namespace Models
     Public Class ProviderHelper
-        Public Function GetProviders() As IList(Of Provider)
-            Dim providers As IList(Of Provider)
+        Public Function GetProviders() As IList(Of Providers)
+            Dim providers As IList(Of Providers)
             Using session As ISession = NHibernateHelper.GetCurrentSession()
 
                 Dim query As IQuery = session.CreateQuery("from Lieferant")
-                providers = query.List(Of Provider)()
+                providers = query.List(Of Providers)()
             End Using
 
             Return providers
         End Function
 
-        Public Function GetProviderById(id As Integer) As Provider
-            Dim provider As Provider = New Provider
+        Public Function GetProviderById(id As Integer) As Providers
+            Dim providers As Providers = New Providers
             Using session As ISession = NHibernateHelper.GetCurrentSession()
-                provider = session.Get(Of Provider)(id)
+                providers = session.Get(Of Providers)(id)
             End Using
 
-            Return provider
+            Return providers
         End Function
 
-        Public Function CreateProvider(provider As Provider) As Integer
+        Public Function CreateProvider(providers As Providers) As Integer
             Dim providerNo As Integer
             Using session As ISession = NHibernateHelper.GetCurrentSession()
                 Using trans As ITransaction = session.BeginTransaction()
-                    session.Save(provider)
+                    session.Save(providers)
                     trans.Commit()
                 End Using
             End Using
             Return providerNo
         End Function
 
-        Public Sub UpdateProvider(provider As Provider)
+        Public Sub UpdateProvider(providers As Providers)
             Using session As ISession = NHibernateHelper.GetCurrentSession()
                 Using trans As ITransaction = session.BeginTransaction()
-                    session.Update(provider)
+                    session.Update(providers)
                     trans.Commit()
                 End Using
             End Using
         End Sub
 
-        Public Sub DeleteProvider(provider As Provider)
+        Public Sub DeleteProvider(providers As Providers)
             Using session As ISession = NHibernateHelper.GetCurrentSession()
                 Using trans As ITransaction = session.BeginTransaction()
-                    session.Delete(provider)
+                    session.Delete(providers)
                     trans.Commit()
                 End Using
             End Using

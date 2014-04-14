@@ -1,33 +1,34 @@
-﻿Imports System.Linq.Expressions
-Imports ipa_intrAtrix.Models.Contracts
-Imports ipa_intrAtrix.Models
-
-Public Class ProviderController
+﻿Public Class ProviderController
     Inherits System.Web.Mvc.Controller
 
-    ' ReSharper disable once FieldCanBeMadeReadOnly.Local
-    Private _providerData As ProviderHelper = New ProviderHelper
     '
-    ' GET: /ProviderData
+    ' GET: /Provider
 
     Function Index() As ActionResult
         Return View()
     End Function
 
     '
-    ' GET: /ProviderData/Details/5
+    ' GET: /Provider/Details/5
 
     Function Details(ByVal id As Integer) As ActionResult
         Return View()
     End Function
 
     '
-    ' POST: /ProviderData/Create
+    ' GET: /Provider/Create
+
+    Function Create() As ActionResult
+        Return View()
+    End Function
+
+    '
+    ' POST: /Provider/Create
 
     <HttpPost()> _
-    Function Create(provider As Provider) As ActionResult
+    Function Create(ByVal collection As FormCollection) As ActionResult
         Try
-            _providerData.CreateProvider(provider)
+            ' TODO: Add insert logic here
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -35,12 +36,20 @@ Public Class ProviderController
     End Function
 
     '
-    ' POST: /ProviderData/Edit/5
+    ' GET: /Provider/Edit/5
+
+    Function Edit(ByVal id As Integer) As ActionResult
+        Return View()
+    End Function
+
+    '
+    ' POST: /Provider/Edit/5
 
     <HttpPost()> _
-    Function Edit(ByVal id As Integer, provider As Provider) As ActionResult
+    Function Edit(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
         Try
-            _providerData.UpdateProvider(provider)
+            ' TODO: Add update logic here
+
             Return RedirectToAction("Index")
         Catch
             Return View()
@@ -48,13 +57,20 @@ Public Class ProviderController
     End Function
 
     '
-    ' POST: /ProviderData/Delete/5
+    ' GET: /Provider/Delete/5
+
+    Function Delete(ByVal id As Integer) As ActionResult
+        Return View()
+    End Function
+
+    '
+    ' POST: /Provider/Delete/5
 
     <HttpPost()> _
     Function Delete(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
         Try
-            Dim provider = _providerData.GetProviderById(id)
-            _providerData.DeleteProvider(provider)
+            ' TODO: Add delete logic here
+
             Return RedirectToAction("Index")
         Catch
             Return View()

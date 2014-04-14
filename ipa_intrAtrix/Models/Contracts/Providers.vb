@@ -1,6 +1,6 @@
 ﻿
 Namespace Models.Contracts
-    Public Class Provider
+    Public Class Providers
         Private _providerId As Integer
         Private _company As String
         Private _lockbox As String
@@ -77,7 +77,7 @@ Namespace Models.Contracts
             End Set
         End Property
 
-        Protected Overridable Property Contact() As IList(Of Contact)
+        Public Overridable Property Contact() As IList(Of Contact)
             Get
                 Return _contact
             End Get

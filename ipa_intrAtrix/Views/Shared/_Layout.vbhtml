@@ -13,12 +13,14 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Ihr Logo hier einfügen", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Atrix", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
                        Hallo <span class="username">@User.Identity.Name</span>!
                     </section>
+                    
+
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
@@ -39,7 +41,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Meine ASP.NET MVC-Anwendung</p>
+                    <p>&copy; @DateTime.Now.Year - intrAtrix </p>
                 </div>
             </div>
         </footer>

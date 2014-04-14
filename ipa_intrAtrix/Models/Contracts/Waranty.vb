@@ -14,11 +14,11 @@
             End Set
         End Property
 
-        Public Overridable Property WarantyDescr() As Integer
+        Public Overridable Property WarantyDescr() As String
             Get
                 Return _warantyDescr
             End Get
-            Set(value As Integer)
+            Set(value As String)
                 _warantyDescr = value
             End Set
         End Property

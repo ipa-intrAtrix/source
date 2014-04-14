@@ -1,4 +1,5 @@
-﻿Imports ipa_intrAtrix.Models.Contracts
+﻿Imports NHibernate.Criterion
+Imports ipa_intrAtrix.Models.Contracts
 Imports NHibernate
 
 Namespace Models
@@ -8,20 +9,17 @@ Namespace Models
             Dim customerNetworks As IList(Of CustomerNetwork)
             Using session As ISession = NHibernateHelper.GetCurrentSession()
 
-                Dim query As IQuery = session.CreateQuery("from Kundennetzwerk")
-                customerNetworks = query.List(Of CustomerNetwork)()
+                Dim criteria As ICriteria = session.CreateCriteria(GetType(CustomerNetwork))
+                customerNetworks = criteria.List(Of CustomerNetwork)()
             End Using
 
             Return customerNetworks
         End Function
 
         Public Function GetCustomerNetworkById(id As Integer) As CustomerNetwork
-            Dim customerNetwork As CustomerNetwork = New CustomerNetwork
             Using session As ISession = NHibernateHelper.GetCurrentSession()
-                customerNetwork = session.Get(Of CustomerNetwork)(id)
+                Return session.CreateCriteria(Of CustomerNetwork)().Add(Restrictions.Eq("CustId", id)).UniqueResult(Of CustomerNetwork)()
             End Using
-
-            Return customerNetwork
         End Function
 
         Public Function CreateCustomerNetwork(customerNetwork As CustomerNetwork) As Integer

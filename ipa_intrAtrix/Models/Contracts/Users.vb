@@ -9,7 +9,7 @@
         Private _domainName As String
         Private _username As String
         Private _pass As String
-        Private _provider As IList(Of Provider) = New List(Of Provider)
+        Private _provider As IList(Of Providers) = New List(Of Providers)
 
         Public Overridable Property UserId() As Integer
             Get
@@ -84,11 +84,11 @@
         End Property
 
 
-        Public Overridable Property Provider() As IList(Of Provider)
+        Public Overridable Property Provider() As IList(Of Providers)
             Get
                 Return _provider
             End Get
-            Set(value As IList(Of Provider))
+            Set(value As IList(Of Providers))
                 _provider = value
             End Set
         End Property

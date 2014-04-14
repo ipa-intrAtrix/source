@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-    namespace="ipa_intrAtrix.Models" assembly="ipa_intrAtrix">
+    namespace="ipa_intrAtrix.Models.Contracts" assembly="ipa_intrAtrix">
 
   <class name="Users" table="User" lazy="false">
 
@@ -36,7 +36,7 @@
       <column name ="user_passwort" not-null="false"/>
     </property>
 
-    <set name="Users" table="User_Lieferant"
+    <set name="Provider" table="User_Lieferant"
             inverse="false" fetch="select" cascade="all">
       <key column="zw_lieferant_id" />
       <many-to-many column="zw_user_id" class="Users" />

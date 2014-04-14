@@ -1,23 +1,70 @@
-﻿@Code
-    ViewData("Title") = "Lieferantenangaben"
+﻿@ModelType IEnumerable(Of ipa_intrAtrix.Models.Contracts.Providers)
+
+@Code
+    ViewData("Title") = "Index"
 End Code
 
+<h2>Index</h2>
 
-@section featured
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewData("Title").</h1>
-                <h2>@ViewData("Message")</h2>
-            </hgroup>
-            <p>
-                Hier sind alle Lieferantenangaben zu finden. 
-            </p>
-        </div>
-    </section>
-End Section
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.ProviderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.LockBox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.CustomerRef)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.Weblink)
+        </th>
+        <th></th>
+    </tr>
 
-<h3>Inhalt der der Lieferantenangaben Seite.</h3>
-<ol class="round">
-    <li><a href="#">Lieferanten Details</a></li>
-</ol>
+@For Each item In Model
+    Dim currentItem = item
+    @<tr>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.ProviderId)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Company)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.LockBox)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.CustomerRef)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(Function(modelItem) currentItem.Weblink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", New With {.id = currentItem.ProviderId}) |
+            @Html.ActionLink("Details", "Details", New With {.id = currentItem.ProviderId}) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = currentItem.ProviderId})
+        </td>
+    </tr>
+Next
+
+</table>
